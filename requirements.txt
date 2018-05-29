@@ -7,6 +7,7 @@ django-templated-email==2.2.0
 gunicorn==19.8.1
 Pillow==5.0.0
 psycopg2==2.7.4
+psycopg2-binary==2.7.4
 pytz==2018.3
 six==1.11.0
 whitenoise==3.3.1
