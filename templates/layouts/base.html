@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+	<head>
+        {% include 'layouts/head.html' %}
+        <title> {% block title %}{% endblock %} | Life at Code</title>
+        {% block extrahead %}
+        {% endblock %}
+	</head>
+	<body>
+        <!-- Navigation -->
+        {% include "layouts/navigation.html" %}
+
+        {% block content %}
+
+        {% endblock %}
+
+		<!--Footer-->
+        {% include 'layouts/footer.html' %}
+        <!-- JS -->
+        {% include 'layouts/js.html' %}
+        {% block script %}
+
+        {% endblock %}
+	</body>
+</html>

@@ -1,0 +1,301 @@
+{% extends 'layouts/base.html' %}
+{% load static %}
+{% block title %} Portfolio {% endblock %}
+{% block content %}
+
+<section>
+    <div class="wrapper dg-content">
+        <div class="container-portfolio">
+           <h1 class="animated wow fadeInUpBig animated">Quality user experience through responsive Web design & Development</h1>
+            <a class="btn btn-learnmore animated wow fadeInUpBig" href="#portfolio">Check out portfolio</a>
+        </div>
+        <ul class="bg-life">
+            <li>Life</li>
+            <li>at</li>
+            <li>Code</li>
+            <li> </> </li>
+            <li>Python</li>
+            <li>Rails</li>
+            <li>JS</li>
+            <li>Ruby</li>
+            <li>Django</li>
+            <li>WordPress</li>
+        </ul>
+    </div>
+</section>
+<!-- Portfolio Grid Section -->
+<section id="portfolio" class="bg-light-gray">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12 text-center">
+                <h2 class="section-heading">Portfolio</h2>
+
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-4 col-sm-6 portfolio-item">
+                <a data-target="#one" class="portfolio-link" data-toggle="modal">
+                    <div class="portfolio-hover">
+                        <div class="portfolio-hover-content">
+                            <i class="fa fa-search fa-3x"></i>
+                        </div>
+                    </div>
+                    <img src="{% static 'images/wow.png' %}" alt="wowvideotours.com" class="img-responsive">
+                </a>
+                <div class="portfolio-caption">
+                    <h4>Website creation</h4>
+                    <p class="text-muted">Website Development</p>
+                </div>
+            </div>
+            <div class="col-md-4 col-sm-6 portfolio-item">
+                <a data-target="#two" class="portfolio-link" data-toggle="modal">
+                    <div class="portfolio-hover">
+                        <div class="portfolio-hover-content">
+                            <i class="fa fa-search fa-3x"></i>
+                        </div>
+                    </div>
+                    <img src="{% static 'images/Olivo_website.png' %}" alt="olivo.co.uk" class="img-responsive">
+                </a>
+                <div class="portfolio-caption">
+                    <h4>Website Creation</h4>
+                    <p class="text-muted">Website Development</p>
+                </div>
+            </div>
+            <div class="col-md-4 col-sm-6 portfolio-item">
+                <a data-target="#three" class="portfolio-link" data-toggle="modal">
+                    <div class="portfolio-hover">
+                        <div class="portfolio-hover-content">
+                            <i class="fa fa-search fa-3x"></i>
+                        </div>
+                    </div>
+                    <img src="{% static 'images/city.png' %}" alt="cityexplorer.net" class="img-responsive">
+                </a>
+                <div class="portfolio-caption">
+                    <h4>Website Creation</h4>
+                    <p class="text-muted">Website Development</p>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-4 col-sm-6 portfolio-item">
+                <a data-target="#four" class="portfolio-link" data-toggle="modal">
+                    <div class="portfolio-hover">
+                        <div class="portfolio-hover-content">
+                            <i class="fa fa-search fa-3x"></i>
+                        </div>
+                    </div>
+                    <img src="{% static 'images/The-Man.png' %}" alt="hail2theman.com" class="img-responsive">
+                </a>
+                <div class="portfolio-caption">
+                    <h4>Website Creation</h4>
+                    <p class="text-muted">Website Development</p>
+                </div>
+            </div>
+            <div class="col-md-4 col-sm-6 portfolio-item">
+                <a data-target="#five" class="portfolio-link" data-toggle="modal">
+                    <div class="portfolio-hover">
+                        <div class="portfolio-hover-content">
+                            <i class="fa fa-search fa-3x"></i>
+                        </div>
+                    </div>
+                    <img src="{% static 'images/peruzal.png' %}" alt="training.peruzal.com" class="img-responsive">
+                </a>
+                <div class="portfolio-caption">
+                    <h4>Website Creation</h4>
+                    <p class="text-muted">Website Development</p>
+                </div>
+            </div>
+            <div class="col-md-4 col-sm-6 portfolio-item">
+                <a data-target="#six" class="portfolio-link" data-toggle="modal">
+                    <div class="portfolio-hover">
+                        <div class="portfolio-hover-content">
+                            <i class="fa fa-search fa-3x"></i>
+                        </div>
+                    </div>
+                    <img src="{% static 'images/chess.png' %}" alt="chessforhumanity.org" class="img-responsive">
+                </a>
+                <div class="portfolio-caption">
+                    <h4>Website Creation</h4>
+                    <p class="text-muted">Website Development</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+    <!-- Portfolio Modals -->
+    <!-- Use the modals below to showcase details about your portfolio projects! -->
+
+    <!-- Portfolio Modal 1 -->
+    <div class="portfolio-modal modal fade" id="one" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-content">
+            <div class="close-modal" data-dismiss="modal">
+                <div class="lr">
+                    <div class="rl">
+                    </div>
+                </div>
+            </div>
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-8 col-md-offset-2">
+                        <div class="modal-body">
+                            <!-- Project Details Go Here -->
+                            <img src="{% static 'images/wow.png' %}" alt="wowvideotours.com" class="img-responsive">
+                            <p></p>
+                            <h3>Platform: PHP, WordPress (Framework)</h3>
+                            <p>Website:<a href="http://wowvideotours.com" target="_blank"> wowvideotours.com</a></p>
+                            <button type="button" class="btn btn-default submit_button" data-dismiss="modal"><i class="fa fa-times"></i> Close Project</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- End Modal 1 -->
+    <!-- Portfolio Modal 2 -->
+    <div class="portfolio-modal modal fade" id="two" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-content">
+            <div class="close-modal" data-dismiss="modal">
+                <div class="lr">
+                    <div class="rl">
+                    </div>
+                </div>
+            </div>
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-8 col-md-offset-2">
+                        <div class="modal-body">
+                            <!-- Project Details Go Here -->
+
+                             <img src="{% static 'images/Olivo_website.png' %}" alt="olivo.co.uk" class="img-responsive">
+                            <p></p>
+                            <h3>Platform: PHP, WordPress (Framework)</h3>
+                            <p>Website:<a href="http://olivo.co.uk/" target="_blank"> olivo.co.uk</a></p>
+                            <button type="button" class="btn btn-default submit_button" data-dismiss="modal"><i class="fa fa-times"></i> Close Project</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- End Modal 2 -- >
+    <!-- Portfolio Modal 3 -->
+    <div class="portfolio-modal modal fade" id="three" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-content">
+            <div class="close-modal" data-dismiss="modal">
+                <div class="lr">
+                    <div class="rl">
+                    </div>
+                </div>
+            </div>
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-8 col-md-offset-2">
+                        <div class="modal-body">
+                            <!-- Project Details Go Here -->
+
+                            <img src="{% static 'images/city.png' %}" alt="cityexplorer.net" class="img-responsive">
+                            <p></p>
+                            <h3>Platform: PHP, WordPress (Framework)</h3>
+                            <p>Website:<a href="http://cityexplorer.net" target="_blank"> cityexplorer.net</a></p>
+                            <button type="button" class="btn btn-default submit_button" data-dismiss="modal"><i class="fa fa-times"></i> Close Project</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- End modal 3 -->
+
+    <!-- Portfolio Modal 4 -->
+    <div class="portfolio-modal modal fade" id="four" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-content">
+            <div class="close-modal" data-dismiss="modal">
+                <div class="lr">
+                    <div class="rl">
+                    </div>
+                </div>
+            </div>
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-8 col-md-offset-2">
+                        <div class="modal-body">
+                            <!-- Project Details Go Here -->
+                            <img src="{% static 'images/The-Man.png' %}" alt="hail2theman.com" class="img-responsive">
+                            <p></p>
+                            <h3>Platform: PHP, WordPress (Framework)</h3>
+                            <p>Website:<a href="http://hail2theman.com" target="_blank"> hail2theman.com</a></p>
+                            <button type="button" class="btn btn-default submit_button" data-dismiss="modal"><i class="fa fa-times"></i> Close Project</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- End modal 4 -->
+
+    <!-- Portfolio Modal 5 -->
+    <div class="portfolio-modal modal fade" id="five" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-content">
+            <div class="close-modal" data-dismiss="modal">
+                <div class="lr">
+                    <div class="rl">
+                    </div>
+                </div>
+            </div>
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-8 col-md-offset-2">
+                        <div class="modal-body">
+                            <!-- Project Details Go Here -->
+                            <img src="{% static 'images/peruzal.png' %}" alt="peruzal.com" class="img-responsive">
+                            <p></p>
+                            <h3>Platform: NodeJS, ExpressJS (Framework)</h3>
+                            <p>Website:<a href="http://peruzal.com" target="_blank"> peruzal.com</a></p>
+                            <button type="button" class="btn btn-default submit_button" data-dismiss="modal"><i class="fa fa-times"></i> Close Project</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- End modal 5 -->
+
+    <!-- Portfolio Modal 6 -->
+    <div class="portfolio-modal modal fade" id="six" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-content">
+            <div class="close-modal" data-dismiss="modal">
+                <div class="lr">
+                    <div class="rl">
+                    </div>
+                </div>
+            </div>
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-8 col-md-offset-2">
+                        <div class="modal-body">
+                            <!-- Project Details Go Here -->
+                            <img src="{% static 'images/chess.png' %}" alt="chessforhumanity.org" class="img-responsive">
+                            <p></p>
+                            <h3>Platform: PHP, WordPress (Framework)</h3>
+                            <p>Website:<a href="http://chessforhumanity.org/" target="_blank"> chessforhumanity.org</a></p>
+                            <button type="button" class="btn btn-default submit_button" data-dismiss="modal"><i class="fa fa-times"></i> Close Project</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- End modal 6 -->
+<!-- border of footer top -->
+<section id="footer-portfolio">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12 text-center">
+                <a href="/orders" title="Contacts">Hire me for your project </a>
+            </div>
+        </div>
+    </div>
+</section>
+
+{% endblock %}

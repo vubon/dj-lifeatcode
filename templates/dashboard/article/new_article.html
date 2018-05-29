@@ -1,0 +1,94 @@
+{% extends 'dashboard/layouts/base.html' %}
+{% load static %}
+{% block title %}
+    New Article
+{% endblock %}
+{% block content %}
+    <div class="page home-page">
+        <!-- Main Navbar-->
+        <header class="header">
+            {% include 'dashboard/layouts/header.html' %}
+        </header>
+        <div class="page-content d-flex align-items-stretch">
+            <!-- Side Navbar -->
+            <nav class="side-navbar">
+                {% include 'dashboard/layouts/sidebar.html' %}
+            </nav>
+            <div class="content-inner">
+                <!-- Page Header-->
+                <header class="page-header">
+                    <div class="container-fluid">
+                        <h2 class="no-margin-bottom">Add New Article</h2>
+                    </div>
+                </header>
+                <section class="tables">
+                    <div class="container-fluid">
+                        <div class="row">
+                            <div class="col-lg-9">
+                                <div class="card">
+                                    <div class="card-close">
+                                        <div class="dropdown">
+                                            <button type="button" id="closeCard" data-toggle="dropdown"
+                                                    aria-haspopup="true" aria-expanded="false" class="dropdown-toggle">
+                                                <i class="fa fa-ellipsis-v"></i></button>
+                                            <div aria-labelledby="closeCard" class="dropdown-menu has-shadow"><a
+                                                    href="#" class="dropdown-item remove"> <i class="fa fa-times"></i>Close</a><a
+                                                    href="#" class="dropdown-item edit"> <i class="fa fa-gear"></i>Edit</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="card-header d-flex align-items-center">
+                                        <h3 class="h4">New Article</h3>
+                                    </div>
+                                    <div class="card-body">
+                                        <form action="">
+                                            {% csrf_token %}
+                                            <div class="form-group">
+                                                <input type="text" class="form-control" id="title" aria-describedby="title" placeholder="Article Title">
+                                            </div>
+                                            <div class="form-group">
+                                                 <textarea rows="10" cols="5" name="description" placeholder="Enter Your Message" class="form-control"></textarea>
+                                            </div>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-3">
+                                <div class="card">
+                                    <div class="card-close">
+                                        <div class="dropdown">
+                                            <button type="button" id="closeCard" data-toggle="dropdown"
+                                                    aria-haspopup="true" aria-expanded="false" class="dropdown-toggle">
+                                                <i class="fa fa-ellipsis-v"></i></button>
+                                            <div aria-labelledby="closeCard" class="dropdown-menu has-shadow"><a
+                                                    href="#" class="dropdown-item remove"> <i class="fa fa-times"></i>Close</a><a
+                                                    href="#" class="dropdown-item edit"> <i class="fa fa-gear"></i>Edit</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="card-header d-flex align-items-center">
+                                        <h3 class="h4">Publish Article</h3>
+                                    </div>
+                                    <div class="card-body">
+                                        <button type="submit" class="btn btn-primary submit_button">Publish</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Page Footer-->
+                <footer class="main-footer">
+                    {% include 'dashboard/layouts/footer.html' %}
+                </footer>
+            </div>
+        </div>
+    </div>
+
+{% endblock %}
+
+{% block script %}
+    <script type="text/javascript" src="{% static "ckeditor/ckeditor-init.js" %}"></script>
+    <script type="text/javascript" src="{% static "ckeditor/ckeditor/ckeditor.js" %}"></script>
+{% endblock %}

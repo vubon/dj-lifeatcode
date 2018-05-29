@@ -1,0 +1,54 @@
+{% extends 'layouts/base.html' %}
+{% load static %}
+{% block title %} Contact {% endblock %}
+{% block content %}
+<section>
+    <div class="dg-contact about">
+        <div class="container-about">
+           <h1 class="animated wow fadeInUpBig animated">Contact me </h1>
+        </div>
+    </div>
+</section>
+<section id="order-form">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-6 col-sm-6">
+            <div class="row">
+                <div class="col-md-6 col-sm-6"><br/>
+                    <img src="{% static 'images/office.jpg' %}" alt="Life at code" class="img-responsive animated wow fadeInUpBig animated">
+                </div>
+                <div class="col-md-6 col-sm-6">
+                    <h3>Life At Code</h3>
+                    <p><span class="fa fa-home icon_color"> Address:</span>  Kalitola, Dinajpur-5200, Bangladesh</p>
+                    <p><span class="fa fa-envelope-o icon_color"> E-mail:</span><a href="mailto:vubon.roy@gmail.com"> vubon.roy@gmail.com</a></p>
+                    <!-- <p><span class="fa fa-phone icon_color"> Phone: </span><a href="tel:+8801737399296">+8801737399296</a></p> -->
+                    <p><span class="fa fa-skype icon_color"> Skype: </span>vubon.roy</p>
+                </div>
+            </div>
+            <hr>
+            <h3>Send A message to Us</h3>
+            <form class="form-horizontal" action="#" method="POST">
+                {% csrf_token %}
+              <div class="form-group">
+                <input type="text" class="form-control" id="name" name="name" placeholder="Name*" required>
+              </div>
+              <div class="form-group">
+                <input type="email" class="form-control" id="email" name="email" placeholder="Enter email*" required>
+              </div>
+              <div class="form-group">
+                <input type="text" class="form-control" id="subject" name="subject" placeholder="Subject">
+              </div>
+              <div class="form-group">
+                  <textarea rows="10" cols="5" name="message" placeholder="Enter Your Message" class="form-control"></textarea>
+              </div>
+              <button type="submit" class="btn btn-default submit_button">Send message</button>
+            </form>
+        </div><br/>
+        <div class="col-md-6 col-sm-6">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3596.914431436079!2d88.64237981495287!3d25.640965319845467!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39fb52bb3d5a9357%3A0x1d70f088c20bdd08!2sVubon!5e0!3m2!1sen!2sbd!4v1457628381541" width="100%" height="640" frameborder="0" style="border:0" allowfullscreen></iframe>
+        </div>
+      </div>
+    </div>
+</section>
+
+{% endblock %}

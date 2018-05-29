@@ -1,0 +1,51 @@
+{% extends 'dashboard/layouts/base.html' %}
+{% block title %}
+    Sign Up Page
+{% endblock %}
+{% block content %}
+    <div class="page login-page">
+      <div class="container d-flex align-items-center">
+        <div class="form-holder has-shadow">
+          <div class="row">
+            <!-- Logo & Information Panel-->
+            <div class="col-lg-6">
+              <div class="info d-flex align-items-center">
+                <div class="content">
+                  <div class="logo">
+                    <h1>Dashboard</h1>
+                  </div>
+                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+                </div>
+              </div>
+            </div>
+            <!-- Form Panel    -->
+            <div class="col-lg-6 bg-white">
+              <div class="form d-flex align-items-center">
+                <div class="content">
+                  <form id="register-form" action="{% url 'signup' %}" method="POST">
+                      {% csrf_token %}
+                      {% for non_field_error in form.non_field_errors %}
+                        <p class="text-danger">{{ non_field_error }}</p>
+                      {% endfor %}
+                      {% for field in form %}
+                        <div class="form-group">
+                            <label for="{{ field.id_for_label }}" class="label-material">{{ field.label_tag  }}</label>
+                                {{ field }}
+                            {% for error in field.errors %}
+                                <p style="color:red;">{{ error }}</p>
+                            {% endfor %}
+                        </div>
+                      {% endfor %}
+
+                      <button type="submit" class="btn btn-primary">Sign up</button>
+                  </form>
+                    <small>Already have an account? </small><a href="{% url 'login' %}" class="signup">Login</a>
+
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+{% endblock %}

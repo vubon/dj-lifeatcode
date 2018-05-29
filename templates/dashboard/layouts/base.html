@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+	<head>
+        {% include 'dashboard/layouts/head.html' %}
+        <title>{% block title %}{% endblock %} | Life at code</title>
+        {% block extrahead %}
+        {% endblock %}
+	</head>
+	<body>
+        <!-- Navigation -->
+{#        {% include "layouts/navigation.html" %}#}
+
+        {% block content %}
+
+        {% endblock %}
+
+		<!--Footer-->
+{#        {% include 'layouts/footer.html' %}#}
+        <!-- JS -->
+        {% include 'dashboard/layouts/js.html' %}
+        {% block script %}
+
+        {% endblock %}
+        {% if messages %}
+            {% for message in messages %}
+                <script>
+                    toastr["{{ message.tags }}"]("{{ message }}");
+                </script>
+            {% endfor %}
+        {% endif %}
+	</body>
+</html>

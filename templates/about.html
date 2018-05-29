@@ -1,0 +1,108 @@
+{% extends 'layouts/base.html' %}
+{% load static %}
+{% block title %}About Me{% endblock %}
+{% block content %}
+<section>
+    <div class="dg-about about">
+        <div class="container-about">
+           <h1 class="animated wow fadeInUpBig animated">FRONT-END & BACK-END DEVELOPER</h1>
+            <h4>LEARN ABOUT MY SKILL SETS AND THE TYPE OF WORK I DO</h4>
+        </div>
+    </div>
+</section>
+<section class="about_me">
+   <div class="container">
+       <div class="row">
+           <div class="col-md-4 col-md-offset-2">
+               <img src="{% static 'images/me.jpg' %}" alt="Vubon Roy" class="img-responsive center-block vubonroy animated wow fadeInUpBig animated">
+           </div>
+           <div class="col-md-6">
+                <blockquote>
+                    <h4>Hello Everyone</h4>
+                    <p>I'm a front-end & back-end developer. Graduate of Mathematics subject.But I am playing with computer long time. Since when I was class 9.I have 2 years commercial experiece working with buyers from around the world. I am providing responsive web app of front-end and back-end both sides.</p>
+                    <p><strong>When people approach to me they need someone with following skills.</strong> </p>
+                </blockquote>
+           </div>
+       </div>
+   </div>
+</section>
+<section id="services-area-about">
+    <div class="overlly-about">
+        <div class="container">
+			<div class="row">
+				<div class="col-md-6">
+					<div class="diamond first">
+						<div class="content">
+							<h3 class="frontH3">Front-end Development</h3>
+						</div>
+					</div>
+					<div class="diamond second">
+						<div class="content">
+							<p>1. Theme <br/> 2. Plugin-setup <br/>3. Custom Functionality</p>
+							<h4>WordPress Development</h4>
+						</div>
+					</div>
+					<div class="diamond third">
+						<div class="content">
+							<p>1. Express <br/> 2. Rectjs <br/> 3. Socket.io</p>
+							<h4>JavaScript Framework</h4>
+						</div>
+					</div>
+					<div class="diamond fourth">
+						<div class="content">
+							<p> 1. HTML <br/> 2. CSS/CSS3 <br/> 3. JavaScript, jQuery <br/> 4. CSS framework Bootstrap</p>
+						</div>
+					</div>
+				</div>
+				<div class="col-md-6 back-end">
+					<div class="diamond first">
+						<div class="content">
+							<h3 class="backH3">Back-end Development</h3>
+						</div>
+					</div>
+					<div class="diamond second">
+						<div class="content">
+							<div class="database">
+								<h4>Database System</h4>
+								<p>MySQL, MongoDB</p>
+							</div>
+						</div>
+					</div>
+					<div class="diamond third">
+						<div class="content cloud">
+							<h4>Cloud Platform:</h4>
+							<p>Heroku, Firebase</p>
+							<h4>Hosting experience:</h4>
+							<p>HostGator, GoDaddy, Bluehost <br/>& More.</p>
+						</div>
+					</div>
+					<div class="diamond fourth">
+						<div class="content">
+							<p class="ruby"> 1. Ruby <br/> 2. NodeJS</p>
+						</div>
+				    </div>
+			    </div>
+		    </div>
+        </div>
+        <div class="container">
+            <div class="row">
+		         <div class="col-md-12 text_about">
+			        <p>I also know UI, UX and integrate to payment system like paypal. For e-mail collection system like MailChimp, GetResponse etc. </p>
+			        <p>For many projects I rely on tools and open-source libraries such as jQuery, Sass, Git, Grunt, Bower, and Modernizr. I also create my own open-source libraries and share them on GitHub, such as the popular Sequence.js.</p>
+			    </div>
+		    </div>
+        </div>
+    </div>
+</section>
+
+<section id="footer-portfolio">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12 text-center">
+                <a href="/portfolio" title="Portfolio">View my works</a>
+            </div>
+        </div>
+    </div>
+</section>
+
+{% endblock %}

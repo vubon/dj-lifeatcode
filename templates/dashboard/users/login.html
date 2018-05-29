@@ -1,0 +1,43 @@
+{% extends 'dashboard/layouts/base.html' %}
+{% block title %}
+    Login Page
+{% endblock %}
+{% block content %}
+    <div class="page login-page">
+      <div class="container d-flex align-items-center">
+        <div class="form-holder">
+          <div class="row justify-content-md-center">
+            <!-- Form Panel    -->
+            <div class="col-lg-6 bg-white">
+              <div class="form d-flex align-items-center">
+                <div class="content">
+                  <form id="login-form" action="{% url 'login' %}"  method="post">
+                    {% csrf_token %}
+                    {% for non_field_error in form.non_field_errors %}
+                        <p class="help is-danger">{{ non_field_error }}</p>
+                    {% endfor %}
+
+                    {% for field in form %}
+                        <div class="form-group">
+                            <label for="{{ field.id_for_label }}" class="label">{{ field.label_tag }}</label>
+                            {{ field }}
+                        {% for error in field.errors %}
+                            <p class="help is-danger">{{ error }}</p>
+                        {% endfor %}
+                        </div>
+                    {% endfor %}
+
+                    <button type="submit" class="btn btn-primary"  >Login</button>
+                  </form>
+                  <a href="#" class="forgot-pass">Forgot Password?</a><br><small>Do not have an account? </small><a href="{% url 'signup' %}" class="signup">Signup</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="copyrights text-center">
+        <p>Design by <a href="/" class="external">Life at code</a></p>
+      </div>
+    </div>
+{% endblock %}

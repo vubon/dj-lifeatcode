@@ -1,0 +1,14 @@
+{% block subject %}{{ subject }}{% endblock %}
+{% block plain %}
+  {% block html %}
+<p><b>Thank you,</b></p>
+
+<p>{{ name }}</p>
+
+<p>{{ message }}</p>
+
+<p><b>This Email comes from Life at code website.</b></b>
+
+
+{% endblock %}
+{% endblock %}

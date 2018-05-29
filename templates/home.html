@@ -1,0 +1,233 @@
+{% extends 'layouts/base.html' %}
+{% block title %} Home {% endblock %}
+{% load static %}
+{% block content %}
+<section xmlns="http://www.w3.org/1999/html">
+    <div class="wrapper dg-content">
+        <div class="container-bg">
+           <h1 class="animated wow fadeInUpBig animated">I BUILD WEB APP BASED ON YOUR IDEA</h1>
+            <a class="btn btn-learnmore animated wow fadeInUpBig" href="#about">LEARN MORE</a>
+        </div>
+        <ul class="bg-life">
+            <li>Life</li>
+            <li>at</li>
+            <li>Code</li>
+            <li>Django</li>
+            <li>NodeJS</li>
+            <li>Rails</li>
+            <li>JS</li>
+            <li>Ruby</li>
+            <li>Python</li>
+            <li>WordPress</li>
+        </ul>
+    </div>
+</section>
+<section id="services-area">
+    <div class="overlly dg-content">
+        <div class="container">
+            <div class="row">
+                <h2 class="what-i-do">What I Do</h2>
+                <hr>
+                <div class="col-md-4 col-sm-4">
+                    <div class="web">
+                        <div class="s-icon-bar">
+                            <i class="fa fa-globe fa-3x"></i>
+                        </div>
+                        <div class="s-description">
+                            <h3 class="text-center">Web Application Development</h3>
+                            <p>I am working on latest web technologies including Ruby on Rails, PHP Frameworks, Ajax, jQuery, Angularjs, WordPress etc. My primary target focuses on delivering high quality web based application with top performance. </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 col-sm-4">
+                    <div class="web">
+                        <div class="s-icon-bar">
+                            <i class="fa fa-paper-plane-o fa-3x"></i>
+                        </div>
+                        <div class="s-description">
+                            <h3 class="text-center">Research on <br/>UI, UX</h3>
+                            <p>User interface along with User experience is our principle research zone. It makes our apps versatile and popular over the world. </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 col-sm-4">
+                    <div class="web">
+                        <div class="s-icon-bar">
+                            <i class="fa fa-pencil fa-3x"></i>
+                        </div>
+                        <div class="s-description">
+                            <h3 class="text-center">Custom <br/> Coding Service</h3>
+                            <p>We listen to our client's personal requests very carefully also. So dedicated customization service also provided by our highly ecperienced developer team. </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<section id="about">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-7 col-sm-7">
+                <h2>About me</h2><hr>
+                <div class="row">
+                    <div class="col-md-4">
+                        <img src="{% static 'images/me.jpg' %}" alt="Vubon Roy" class="img-responsive vubon animated wow fadeInUpBig animated">
+                    </div>
+                    <div class="col-md-8">
+                        <p>Hi,
+                            My name is Vubon. I'm solving website problems of any platforms like PHP, WordPress etc. So why are you waiting to hire me for your problem ?? Let's do solve the problem or huge problems.
+
+                            On the other hands, I also help people for making website of any kinds of business like E-commerce website , services website, small website or landing page , large website etc .
+                            Don't wait for making your project live . You can message me feel freely and ask any question about project or about my skills :) . I am working web development category 2 years.  So I have pretty knowledge of web development area .
+
+                            You can contact with me any methods like Skype, E-mail, Hangouts etc. <br>
+                            <a href="/about">More Details</a> <br/>
+                            <small>Best Regards<br/>
+                                Vubon
+                            </small>
+                        </p>
+                    </div>
+                </div>
+
+            </div>
+            <div class="col-md-5 col-sm-5" >
+                <h2>Twitter Feed</h2><hr>
+
+
+                <a class="twitter-timeline" data-width="400" data-height="420" href="https://twitter.com/Vubonroy">Tweets by TwitterDev</a> <script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+
+
+            </div>
+        </div>
+    </div>
+</section>
+<br/>
+<section id="skill">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6"><br/>
+                <h4>Description About Graph</h4>
+                <p>Coding: Coding performance is very good. 95% out of 100% Coding Skills.</p>
+                <p>Designing: I always give my cleint new idea with new design concept.</p>
+                <p>Creativity: Creativity is the main part of present time. I always focuse my creativity in my projects.</p>
+                <p>Success: I can't take any project if I can't give time and not complete the project. So 100% sure success every project.</p>
+                <p>Performance: 95% out of 100% .</p>
+                <p> + Feedback: Always get 95% positive feedback. But sometimes I am losing my positive feedback like 5%. ;) </p>
+                <p>- Feedback: It is very poor in my life. Only 5% people gives bad score. I think it is not big deal.</p>
+                <p>Cummunication: Maximum time client gets me online. You can contact with me any methods. Like Skype, Whatsapp and other messangers.</p>
+            </div>
+            <div class="col-md-6 text-center" >
+                <div id="containerchart" style="height: 500px; width: 100%;"></div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="testmonials">
+    <div class="container testmonials">
+        <div class='row'>
+            <h2 class="heading-client">Words from Clients</h2>
+            <hr/>
+            <div class='col-md-offset-2 col-md-8'>
+              <div class="carousel slide" data-ride="carousel" id="quote-carousel">
+                <!-- Bottom Carousel Indicators -->
+                <ol class="carousel-indicators">
+                  <li data-target="#quote-carousel" data-slide-to="0" class="active"></li>
+                  <li data-target="#quote-carousel" data-slide-to="1"></li>
+                  <li data-target="#quote-carousel" data-slide-to="2"></li>
+                </ol>
+
+                <!-- Carousel Slides / Quotes -->
+                <div class="carousel-inner">
+
+                  <!-- Quote 1 -->
+                  <div class="item active">
+                    <blockquote>
+                      <div class="row">
+
+                        <div class="col-sm-12">
+                          <p>Vubon is the man. Greatest web developer I have had</p>
+                           <small> <span class="client-name">Sal </span>
+                                <span style="float:right">
+                                    <i class="fa fa-star star-color"></i>
+                                    <i class="fa fa-star star-color"></i>
+                                    <i class="fa fa-star star-color"></i>
+                                    <i class="fa fa-star star-color"></i>
+                                    <i class="fa fa-star star-color"></i>
+                                </span>
+                            </small>
+                        </div>
+                      </div>
+                    </blockquote>
+                  </div>
+                  <!-- Quote 2 -->
+                  <div class="item">
+                    <blockquote>
+                      <div class="row">
+                        <div class="col-sm-12">
+                            <p>Vubon did a great job and successfully completed the project under deadline. He communicates frequently, and knew what he was doing. I will definitely keep Vubon in mind for future projects.</p>
+                            <small><span class="client-name">Samson</span>
+                                <span style="float:right">
+                                    <i class="fa fa-star star-color"></i>
+                                    <i class="fa fa-star star-color"></i>
+                                    <i class="fa fa-star star-color"></i>
+                                    <i class="fa fa-star star-color"></i>
+                                    <i class="fa fa-star star-color"></i>
+                                </span>
+                            </small>
+                        </div>
+                      </div>
+                    </blockquote>
+                  </div>
+                  <!-- Quote 3 -->
+                  <div class="item">
+                    <blockquote>
+                      <div class="row">
+                        <div class="col-sm-12">
+                            <p>Vubon is a great freelancer... I hired him for many jobs throughout our contract and he did a great job everytime, Very reliable and has great availability, and is a great coder. Highly recommended!</p>
+                            <small><span class="client-name">Steve </span>
+                                <span style="float:right">
+                                    <i class="fa fa-star star-color"></i>
+                                    <i class="fa fa-star star-color"></i>
+                                    <i class="fa fa-star star-color"></i>
+                                    <i class="fa fa-star star-color"></i>
+                                    <i class="fa fa-star star-color"></i>
+                                </span>
+                            </small>
+
+                        </div>
+                      </div>
+                    </blockquote>
+                  </div>
+                </div>
+
+                <!-- Carousel Buttons Next/Prev
+                <a data-slide="prev" href="#quote-carousel" class="left carousel-control"><i class="fa fa-chevron-left fa-left"></i></a>
+                <a data-slide="next" href="#quote-carousel" class="right carousel-control"><i class="fa fa-chevron-right fa-right"></i></a>
+                -->
+            </div>
+        </div>
+    </div>
+    </div>
+</section>
+
+<section id="footer-top">
+    <div class="footer-overlly">
+        <div class="container button-area">
+            <div class="row text-center">
+                <div class="col-md-12 col-sm-12">
+                    <a class="btn animated-button victoria-one btn-sm" target="_blank" href="https://www.upwork.com/freelancers/~0188b7ca06bed14aa5">Upwork</a>
+                    <a class="btn animated-button victoria-one btn-sm" href="/contacts">Contact</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+{% endblock %}
+
+{% block script %}
+    <script type="text/javascript" src="{% static 'javascripts/canvasjs.min.js' %}"></script>
+    <script src="{% static 'javascripts/custom.js' %}"></script>
+{% endblock %}

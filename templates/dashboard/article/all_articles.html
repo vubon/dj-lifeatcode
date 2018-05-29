@@ -1,0 +1,142 @@
+{% extends 'dashboard/layouts/base.html' %}
+{% load static %}
+{% block title %}
+    All Articles
+{% endblock %}
+{% block content %}
+    <div class="page home-page">
+        <!-- Main Navbar-->
+        <header class="header">
+            {% include 'dashboard/layouts/header.html' %}
+        </header>
+        <div class="page-content d-flex align-items-stretch">
+            <!-- Side Navbar -->
+            <nav class="side-navbar">
+                {% include 'dashboard/layouts/sidebar.html' %}
+            </nav>
+            <div class="content-inner">
+                <!-- Page Header-->
+                <header class="page-header">
+                    <div class="container-fluid">
+                        <h2 class="no-margin-bottom">All Articles</h2>
+                    </div>
+                </header>
+                <!-- Dashboard Counts Section-->
+                <section class="dashboard-counts no-padding-bottom">
+                    <div class="container-fluid">
+                        <div class="row bg-white has-shadow">
+                            <!-- Item -->
+                            <div class="col-xl-3 col-sm-6">
+                                <div class="item d-flex align-items-center">
+                                    <div class="icon bg-violet"><i class="icon-user"></i></div>
+                                    <div class="title"><span>New<br>Clients</span>
+                                        <div class="progress">
+                                            <div role="progressbar" style="width: 25%; height: 4px;" aria-valuenow="25"
+                                                 aria-valuemin="0" aria-valuemax="100"
+                                                 class="progress-bar bg-violet"></div>
+                                        </div>
+                                    </div>
+                                    <div class="number"><strong>25</strong></div>
+                                </div>
+                            </div>
+                            <!-- Item -->
+                            <div class="col-xl-3 col-sm-6">
+                                <div class="item d-flex align-items-center">
+                                    <div class="icon bg-red"><i class="icon-padnote"></i></div>
+                                    <div class="title"><span>Work<br>Orders</span>
+                                        <div class="progress">
+                                            <div role="progressbar" style="width: 25%; height: 4px;" aria-valuenow="25"
+                                                 aria-valuemin="0" aria-valuemax="100"
+                                                 class="progress-bar bg-red"></div>
+                                        </div>
+                                    </div>
+                                    <div class="number"><strong>70</strong></div>
+                                </div>
+                            </div>
+                            <!-- Item -->
+                            <div class="col-xl-3 col-sm-6">
+                                <div class="item d-flex align-items-center">
+                                    <div class="icon bg-green"><i class="icon-bill"></i></div>
+                                    <div class="title"><span>New<br>Invoices</span>
+                                        <div class="progress">
+                                            <div role="progressbar" style="width: 25%; height: 4px;" aria-valuenow="25"
+                                                 aria-valuemin="0" aria-valuemax="100"
+                                                 class="progress-bar bg-green"></div>
+                                        </div>
+                                    </div>
+                                    <div class="number"><strong>44</strong></div>
+                                </div>
+                            </div>
+                            <!-- Item -->
+                            <div class="col-xl-3 col-sm-6">
+                                <div class="item d-flex align-items-center">
+                                    <div class="icon bg-orange"><i class="icon-check"></i></div>
+                                    <div class="title"><span>Open<br>Cases</span>
+                                        <div class="progress">
+                                            <div role="progressbar" style="width: 25%; height: 4px;" aria-valuenow="25"
+                                                 aria-valuemin="0" aria-valuemax="100"
+                                                 class="progress-bar bg-orange"></div>
+                                        </div>
+                                    </div>
+                                    <div class="number"><strong>35</strong></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <section class="tables">
+                    <div class="container-fluid">
+                        <div class="row">
+                            <div class="col-lg-12">
+                                <div class="card">
+                                    <div class="card-close">
+                                        <div class="dropdown">
+                                            <button type="button" id="closeCard" data-toggle="dropdown"
+                                                    aria-haspopup="true" aria-expanded="false" class="dropdown-toggle">
+                                                <i class="fa fa-ellipsis-v"></i></button>
+                                            <div aria-labelledby="closeCard" class="dropdown-menu has-shadow"><a
+                                                    href="#" class="dropdown-item remove"> <i class="fa fa-times"></i>Close</a><a
+                                                    href="#" class="dropdown-item edit"> <i class="fa fa-gear"></i>Edit</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="card-header d-flex align-items-center">
+                                        <h3 class="h4">Article List</h3>
+                                    </div>
+                                    <div class="card-body">
+                                        <table class="table">
+                                            <thead>
+                                            <tr>
+                                                <th>Title</th>
+                                                <th>Author</th>
+                                                <th>Category</th>
+                                                <th>Date</th>
+                                            </tr>
+                                            </thead>
+                                            <tbody>
+                                            {% for article in all_articles %}
+                                            <tr>
+                                                <td>{{ article.title }}</td>
+                                                <td>{{ article.author }}</td>
+                                                <td>{{ article.category_name }}</td>
+                                                <td>{{ article.publish_date }}</td>
+                                            </tr>
+                                            {% endfor %}
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Page Footer-->
+                <footer class="main-footer">
+                    {% include 'dashboard/layouts/footer.html' %}
+                </footer>
+            </div>
+        </div>
+    </div>
+
+{% endblock %}
