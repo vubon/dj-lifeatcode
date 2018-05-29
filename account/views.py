@@ -12,7 +12,7 @@ from .forms import RegisterUserForm, LoginForm
 class RegisterUserView(SuccessMessageMixin, CreateView):
     form_class = RegisterUserForm
     template_name = "dashboard/users/register.html"
-    success_url = '/users/signup'
+    success_url = '/account/login'
     success_message = "Account has been created successfully"
 
     def dispatch(self, request, *args, **kwargs):
