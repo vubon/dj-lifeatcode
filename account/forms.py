@@ -21,6 +21,8 @@ class RegisterUserForm(forms.ModelForm):
         }
         widgets = {
             'username': forms.TextInput(attrs={'class': 'input input-material', 'autofocus': True}),
+            'first_name': forms.TextInput(attrs={'class': 'input input-material', 'autofocus': True}),
+            'last_name': forms.TextInput(attrs={'class': 'input input-material', 'autofocus': True}),
             'email': forms.EmailInput(attrs={'class': 'input input-material', 'required': True})
         }
 
