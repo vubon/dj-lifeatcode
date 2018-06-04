@@ -1,0 +1,109 @@
+{% extends 'dashboard/layouts/base.html' %}
+{% load static %}
+{% block title %}
+    New Category
+{% endblock %}
+{% block content %}
+    <div class="page home-page">
+        <!-- Main Navbar-->
+        <header class="header">
+            {% include 'dashboard/layouts/header.html' %}
+        </header>
+        <div class="page-content d-flex align-items-stretch">
+            <!-- Side Navbar -->
+            <nav class="side-navbar">
+                {% include 'dashboard/layouts/sidebar.html' %}
+            </nav>
+            <div class="content-inner">
+                <!-- Page Header-->
+                <header class="page-header">
+                    <div class="container-fluid">
+                        <h2 class="no-margin-bottom">Add New Category</h2>
+                    </div>
+                </header>
+                <section class="tables">
+                    <div class="container-fluid">
+                        <div class="row">
+                            <div class="col-lg-7">
+                                <div class="card">
+                                    <div class="card-close">
+                                        <div class="dropdown">
+                                            <button type="button" id="closeCard" data-toggle="dropdown"
+                                                    aria-haspopup="true" aria-expanded="false" class="dropdown-toggle">
+                                                <i class="fa fa-ellipsis-v"></i></button>
+                                            <div aria-labelledby="closeCard" class="dropdown-menu has-shadow"><a
+                                                    href="#" class="dropdown-item remove"> <i class="fa fa-times"></i>Close</a><a
+                                                    href="#" class="dropdown-item edit"> <i class="fa fa-gear"></i>Edit</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="card-header d-flex align-items-center">
+                                        <h3 class="h4">Categories</h3>
+                                    </div>
+                                    <div class="card-body">
+                                        <table class="table">
+                                            <thead>
+                                            <tr>
+                                                <th>Title</th>
+                                                <th>Created at</th>
+                                                <th>Action</th>
+                                            </tr>
+                                            </thead>
+                                            <tbody>
+                                            {% for category in categories %}
+                                                <tr>
+                                                    <td>{{ category.name }}</td>
+                                                    <td>{{ category.timestamp }}</td>
+                                                    <td style="display: none;">{{ category.id }}</td>
+                                                    <td><a href="#">Delete</a></td>
+                                                </tr>
+                                            {% endfor %}
+                                            </tbody>
+                                        </table>
+
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-5">
+                                <div class="card">
+                                    <div class="card-close">
+                                        <div class="dropdown">
+                                            <button type="button" id="closeCard" data-toggle="dropdown"
+                                                    aria-haspopup="true" aria-expanded="false" class="dropdown-toggle">
+                                                <i class="fa fa-ellipsis-v"></i></button>
+                                            <div aria-labelledby="closeCard" class="dropdown-menu has-shadow"><a
+                                                    href="#" class="dropdown-item remove"> <i class="fa fa-times"></i>Close</a><a
+                                                    href="#" class="dropdown-item edit"> <i class="fa fa-gear"></i>Edit</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="card-header d-flex align-items-center">
+                                        <h3 class="h4">Create</h3>
+                                    </div>
+                                    <div class="card-body">
+                                        <form action="{% url 'category' %}" method="post">
+                                            {% csrf_token %}
+                                            <div class="form-group">
+                                                <input type="text" name="name" class="form-control" id="id_name"
+                                                       aria-describedby="title" placeholder="Category Title">
+                                            </div>
+                                            <button type="submit" class="btn btn-primary submit_button">Create</button>
+                                        </form>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Page Footer-->
+                <footer class="main-footer">
+                    {% include 'dashboard/layouts/footer.html' %}
+                </footer>
+            </div>
+        </div>
+    </div>
+
+{% endblock %}
+

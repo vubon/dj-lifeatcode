@@ -1,10 +1,11 @@
 from django.contrib import messages
 from django.http import Http404, HttpResponseRedirect
-from django.shortcuts import render
+from django.shortcuts import render, redirect
 from django.views import View
 
 from blog.models.posts import Article
-from blog.forms import ArticleForm
+from blog.models.categories import Category
+from blog.forms import ArticleForm, CategoryForm
 
 
 class AllArticlesView(View):
@@ -42,3 +43,31 @@ class CreateNewArticleView(View):
         }
 
         return render(request, self.template, context)
+
+
+class CreateCategory(View):
+    template_name = 'dashboard/article/new_category.html'
+
+    def get(self, request):
+        categories = Category.objects.all().order_by("-timestamp")
+        return render(request, self.template_name, {"categories": categories})
+
+    def post(self, request):
+        if not request.user.is_staff:
+            raise Http404
+        form = CategoryForm(request.POST)
+        categories = Category.objects.all().order_by("-timestamp")
+
+        if form.is_valid():
+            instance = form.save(commit=False)
+            instance.save()
+            # message success
+            messages.success(request, "Successfully Created")
+            return render(request, self.template_name, {"categories": categories})
+        # message error
+        messages.error(request, "Category with this Name already exists")
+        return render(request, self.template_name, {"categories": categories})
+
+    def delete(self, pk=None):
+        pass
+
