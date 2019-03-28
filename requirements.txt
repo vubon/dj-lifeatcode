@@ -1,5 +1,5 @@
 dj-database-url==0.5.0
-Django==1.11.18
+django>=1.11.19
 django-ckeditor==5.4.0
 django-js-asset==1.0.0
 django-render-block==0.5
